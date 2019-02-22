@@ -1,0 +1,117 @@
+/* pages/find/find.wxss */
+
+.searchBox {
+  margin-top: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.searchBox>view {
+  padding: 20rpx 30rpx;
+  margin: 0 40rpx;
+  border-radius: 40rpx;
+  background-color: #f0f0f0;
+}
+
+picker-view view, .selectBox {
+ text-indent: 20rpx;
+  line-height: 38rpx !important;
+  height: 38rpx !important;
+  overflow: hidden;
+  font-size: 26rpx !important;
+}
+
+.selectBox {
+  width: 130rpx;
+  border-right: 1px solid #e1e1e1;
+  position: relative;
+  float: left;
+}
+
+.selectBox image {
+  position: absolute;
+  right: 18rpx;
+  top: 15rpx;
+  width: 13rpx;
+  height: 11rpx;
+}
+
+.inputBox {
+  width: calc(100% - 150rpx);
+  position: relative;
+  float: left;
+  height: 38rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  text-align: center;
+}
+
+.inputBox input {
+  text-align:left;
+  width: 90%;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  min-height: 38rpx;
+  height: 38rpx;
+}
+
+.inputIcon {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  top: -5rpx;
+  right: 0;
+}
+
+/* list */
+
+.courselist,.schoollist {
+  padding: 0 40rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item {
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.itemCourse {
+  line-height: 50rpx;
+}
+
+.CourseName {
+  font-size: 30rpx;
+  color: #0f0f0f;
+  float: left;
+}
+
+.CourseTime {
+  color: #4d4d4d;
+  font-size: 26rpx;
+  float: right;
+}
+
+.school {
+  line-height: 65rpx;
+  position: relative;
+}
+.school .teacherNum{position: absolute;right: 0;top: 0;}
+.school image,.addressdec image,.tel image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.school text {
+  font-size: 28rpx;
+  color: #808080;
+}
+.address{line-height: 48rpx;}
+.address>view{
+ 
+  color: #4d4d4d;
+}
+.addressdec{font-size: 26rpx; float: left;}
+.tel{font-size: 22rpx;float: right;}

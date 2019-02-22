@@ -1,0 +1,67 @@
+/* pages/login/login.wxss */
+
+page, .login, .login image {
+  height: 100%;
+  width: 100%;
+}
+
+.login image {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.loginBox {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 480rpx;
+}
+
+.loginBox>view {
+  border-bottom: 1px solid #fff;
+  line-height: 44rpx;
+}
+
+.user, .psd {
+  height: 44rpx;
+  padding-bottom: 20rpx;
+  position: relative;
+}
+
+.user image, .psd image {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.psd {
+  margin-top: 40rpx;
+}
+
+.login_btn {
+  margin-top: 90rpx;
+  border: 0;
+  background-color: #1a57a8;
+  text-align: center;
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.user input ,.psd input{
+  width: calc(100% - 60rpx);
+  margin-left: 60rpx;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}

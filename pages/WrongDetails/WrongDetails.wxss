@@ -1,0 +1,73 @@
+/* pages/evaluating/evaluating.wxss */
+
+.main {
+  color: #4d4d4d;
+  padding: 28rpx 24rpx;
+}
+
+.tea {
+  position: absolute;
+  font-size: 30rpx;
+  height: 30rpx;
+  right: 10rpx;
+  bottom: -10rpx;
+  color: #e8ecf5;
+}
+
+.testBox {
+  position: relative;
+  padding: 35rpx 20rpx;
+  box-shadow: 0 0 10rpx 5rpx #eaeffa;
+  font: 28rpx/64rpx "微软雅黑";
+}
+
+.type {
+  font-size: 22rpx;
+  color: #fff;
+  height: 30rpx;
+  padding: 0 10rpx;
+  background-color: #1b429e;
+  border-radius: 5rpx;
+}
+
+.testHeader {
+  position: relative;
+}
+
+.typebox {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  text-indent: 120rpx;
+  text-align: left;
+}
+
+.checkBox {
+  padding: 20rpx 0 0 50rpx;
+}
+
+.checkBox view {
+  font: 28rpx/58rpx "微软雅黑";
+}
+
+.checkBox view:hover .option {
+  background-color: #1b429e;
+  color: #fff;
+}
+
+.option {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  color: #666;
+}
+.tip{margin: 30rpx 0;font-size: 28rpx;margin-left: 50rpx;}
+.tip text:nth-of-type(1){color: #ef9945;}
+.tip text:nth-of-type(2){color: #458def;}
+

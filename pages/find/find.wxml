@@ -1,0 +1,70 @@
+<!--pages/find/find.wxml-->
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class='searchBox'>
+    <view class='clearfix'>
+      <view class='selectBox'>
+        <picker-view indicator-style=" height: 38rpx;" indicator-class="indicator-class" style="height: 38rpx;" value="{{value}}" bindchange="bindChange">
+          <picker-view-column>
+            <view wx:for="{{years}}">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+        <image class='icon' src='../../images/select_icon.png'></image>
+      </view>
+      <view class='inputBox'>
+        <input bindblur="bindblur" confirm-type="search" type="text" placeholder="请输入课程名称" focus="{{focus}}" />
+        <image src="../../images/search.png" class='inputIcon' mode='widthFix'></image>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{courserList}}" class='courselist'>
+    <view bindtap='goshoolDetail' class='item' wx:for="{{list}}">
+      <view class='itemCourse clearfix'>
+        <text class='CourseName'>{{item.CourseName}}</text>
+        <text class='CourseTime'><text>开课时间：</text> {{item.time}}</text>
+      </view>
+      <view class='school'>
+        <image src='../../images/school.png' mode='widthFix'></image>
+        <text> {{item.school}}</text>
+      </view>
+      <view class='address clearfix'>
+        <view class='addressdec'>
+          <image src='../../images/address.png' mode='widthFix'></image>
+          <text>{{item.address}}</text>
+        </view>
+        <view class='tel'>
+          <image src='../../images/tel.png' mode='widthFix'></image>
+          <text>{{item.tel}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='schoollist' wx:if="{{schoolList}}">
+    <view bindtap='goshoolDetail' class='item' wx:for="{{schoollist}}">
+      <view class='itemCourse clearfix'>
+        <text class='CourseName'>{{item.CourseName}}</text>
+      </view>
+      <view class='school'>
+        <text>负责人</text>
+        <text> {{item.principal}}</text>
+        <view class='teacherNum'>
+            <text>教师人数：</text>
+            <text>{{item.num}}</text>
+        </view>
+      </view>
+      <view class='address clearfix'>
+        <view class='addressdec'>
+          <image src='../../images/address.png' mode='widthFix'></image>
+          <text>{{item.address}}</text>
+        </view>
+        <view class='tel'>
+          <image src='../../images/tel.png' mode='widthFix'></image>
+          <text>{{item.tel}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

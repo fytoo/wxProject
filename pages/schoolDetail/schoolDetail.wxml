@@ -1,0 +1,95 @@
+<!--index.wxml-->
+'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container" style='margin-top: {{height}}px'>
+  <view class='schoolInfo'>
+    <view class='school clearfix'>
+      <view class='schoolimg'>
+        <image src='../../images/1.jpg' mode='aaspectFill'></image>
+      </view>
+      <view class='schoolRight'>
+        <view class='schoolName'>博弈职业技术学院</view>
+        <view class='schoolCourse'>
+          <image src='../../images/schoolCourse.png' mode='aspectFill'></image>
+          <text>课程总数：</text>
+          <text>7门</text>
+        </view>
+        <view class='schooladdress'>
+          <image src='../../images/address.png' mode='aspectFill'></image>
+          <text>房间拉数据大幅拉多少</text>
+        </view>
+        <view class='schoolTel'>
+          <image src='../../images/tel.png' mode='aspectFill'></image>
+          <text>15539003245</text>
+        </view>
+      </view>
+    </view>
+    <view class='schoolDec'>
+      <view class='schoolDectitle'>
+        学校简介：
+      </view>
+      <view class='schoolDectext'>
+        就飞拉萨就翻垃圾哦熬过即将，垃圾挂机法兰克福家里就拉了奋力将发挥归墟扥违反发射后可刚看了据电话卡看见发分类分级拉法基看来
+      </view>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='item'>
+      <view class='itemType'>
+        <text>种养殖技术</text>
+        <text class='time'>
+              <text>开课时间：</text>
+             <text>2018/12/21</text>
+        </text>
+      </view>
+      <view class='itemAddress clearfix'>
+            <view>
+              <image src='../../images/address.png'></image>
+              <text> 对方将垃圾分类的</text>
+            </view>
+             <view>
+              <image src='../../images/tel.png'></image>
+              <text> 7875927597</text>
+            </view>
+      </view>
+      <view class='itemNum clearfix'>
+           <view>
+              <image src='../../images/teacher.png'></image>
+              <text> 对方将垃圾分类的</text>
+            </view>
+             <view>
+              <text> 7875927597人学习</text>
+            </view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='itemType'>
+        <text>种养殖技术</text>
+        <text class='time'>
+              <text>开课时间：</text>
+             <text>2018/12/21</text>
+        </text>
+      </view>
+      <view class='itemAddress clearfix'>
+            <view>
+              <image src='../../images/address.png'></image>
+              <text> 对方将垃圾分类的</text>
+            </view>
+             <view>
+              <image src='../../images/tel.png'></image>
+              <text> 7875927597</text>
+            </view>
+      </view>
+      <view class='itemNum clearfix'>
+           <view>
+              <image src='../../images/teacher.png'></image>
+              <text> 对方将垃圾分类的</text>
+            </view>
+             <view>
+              <text> 7875927597人学习</text>
+            </view>
+      </view>
+    </view>
+  </view>
+</view>

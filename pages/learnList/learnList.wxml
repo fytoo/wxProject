@@ -1,0 +1,42 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+     <view class="main">
+       <view class="content">
+         <view class="videoBox">
+           <image src="../../images/1.jpg" mode='widthFix'></image>
+         </view>
+         <view class="list">
+           <view class="item">
+             <view class="box">
+               <text class="item_order">课程简介：</text>
+                <text class="item_num">666人学习</text>
+             </view>
+             <view class="item_content">达芙妮萨迪克金凤花时间大幅拉进了房间打扫涉及到了附近的撒开了封开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+           </view>
+         </view>
+         
+       </view>
+       <view view class="operationBox">
+            <view class="item" wx:for="{{LidtData}}" :key="index" catchtap="show" data-index="{{index}}">
+                <view class="firstMeun" :class="[{active:item.show}]">
+                    <text>{{item.title}}</text> 
+                    <image src='../../images/up.png' wx:if="{{item.show}}" class="up more"></image>
+                    <image src='../../images/more.png' wx:if="{{!item.show}}" class="more smallmore"></image>
+                </view>
+                <!-- 二级菜单 -->
+                <view wx:if="{{item.show}}">
+                  <view class="secondeMeun" wx:for="{{item.secTitle}}" :key="index" data-index='{{sexIndex}}' catchtap="showSecmeun">
+                       <view>
+                        <text>{{item.order}}</text>
+                        <text>{{item.dec}} </text>
+                        <image src="../../images/smallmore.png" class="more "></image>
+                      </view>
+                  </view>
+                </view>
+            </view>
+            
+         </view>
+    </view>
+</view>

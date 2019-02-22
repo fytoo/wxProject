@@ -1,0 +1,30 @@
+/* pages/learnListitem/learnListitem.wxss */
+
+.main {
+  color: #4d4d4d;
+  padding: 20rpx 15rpx 60rpx 15rpx;
+  
+}
+
+.content {
+  position: relative;
+  min-height:1000rpx;
+  padding: 35rpx 20rpx;
+  box-shadow: 0 0 10px 5px #eaeffa;
+  font: 28rpx/64rpx "微软雅黑";
+}
+
+.content .videoBox {
+  height: 350rpx;
+}
+
+.content .videoBox image {
+  height: 100% !important;
+  width: 100%;
+}
+
+.content .videoBox .item {
+  font: 26rpx/42rpx "微软雅黑";
+}
+
+

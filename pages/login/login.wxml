@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+    <image src='../../images/login_bg.png'></image>
+    <view class='loginBox'>
+        <view class='user'>
+          <image src='../../images/user.png'></image>
+          <input type='idcard' bindinput="user" placeholder="请输入用户名" auto-focus />
+        </view>
+        <view class='psd'>
+          <image src='../../images/psd.png'></image>
+          <input password="true" bindinput="pwd" placeholder="请输入密码"/>
+        </view>
+       
+        <button bindtap='loginBtnClick' class='login_btn'>立即登录</button>
+    </view>
+    
+</view>

@@ -1,0 +1,50 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view>
+    <view class="MyTrainBox">
+      <view class="MyTrainType">
+        <text class="subject">种养殖技术</text>
+        <view class="time">
+          <text> 开课时间：</text>
+          <text>2018/12/11</text>
+        </view>
+      </view>
+      <view class="address">
+        <image class='icon' src='../../images/address.png'></image>
+        <text>咸宁市通山县燕下乡</text>
+      </view>
+      <view class="tel">
+        <image class='icon' src='../../images/tel.png'></image>
+        <text>87166161</text>
+      </view>
+    </view>
+    <view class="signIn">
+      <view>
+        <text class="signTime">2018/12/24 12:00</text>
+        <text class="signState">签到成功</text>
+      </view>
+      <view>
+        <text class="signTime">2018/12/24 12:00</text>
+        <text class="signState">签到成功</text>
+      </view>
+      <view>
+        <text class="signTime">2018/12/24 12:00</text>
+        <text class="signState">签到成功</text>
+      </view>
+      <view>
+        <text class="signTime">2018/12/24 12:00</text>
+        <text class="signState">签到成功</text>
+      </view>
+      <view>
+        <text class="signTime">2018/12/24 12:00</text>
+        <text class="signState">签到成功</text>
+      </view>
+      <view>
+        <text class="signTime">2018/12/24 12:00</text>
+        <text class="signState">签到成功</text>
+      </view>
+    </view>
+  </view>
+</view>

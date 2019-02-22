@@ -1,0 +1,44 @@
+image {
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+/*checkbox 选项框大小  */
+
+checkbox .wx-checkbox-input {
+  height: 32rpx;
+  width: 32rpx;
+}
+
+view {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  outline-style: none;
+}
+
+.block {
+  width: 100%;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}

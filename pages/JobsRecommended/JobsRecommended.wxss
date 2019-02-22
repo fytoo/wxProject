@@ -1,0 +1,60 @@
+/* pages/learnListitem/learnListitem.wxss */
+
+.main {
+  color: #4d4d4d;
+  padding: 0 40rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 岗位推荐 */
+
+.recommendBoxItem {
+  background-color: #fff;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.jobBox {
+  line-height: 76rpx;
+}
+
+.jobType {
+  color: #0f0f0f;
+  font-size: 30rpx;
+  float: left;
+}
+
+.salary {
+  color: #f45549;
+  font-size: 26rpx;
+  float: right;
+  margin-right: 15rpx;
+}
+
+.required {
+  font-size: 28rpx;
+  line-height: 76rpx;
+  color: #a3a3a3;
+  position: relative;
+}
+.required text{font-size: 24rpx;}
+.required .time{position: absolute;top: 0;right: 0;}
+.addressBox {
+  position: relative;
+  line-height: 48rpx;
+}
+
+.address {
+  color: #4d4d4d;
+  font-size: 24rpx;
+}
+
+.addressBox .time {
+  color: #808080;
+  font-size: 24rpx;
+  position: absolute;
+  right: 0;
+  bottom: 5rpx;
+}

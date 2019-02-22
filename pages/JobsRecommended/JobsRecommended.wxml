@@ -1,0 +1,37 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class="main">
+    <view class='recommendBox'>
+      <view class='recommendBoxItem' bindtap='gojobdetail'>
+        <view class='jobBox clearfix'>
+          <view class='jobType'>
+            电焊工
+          </view>
+          <view class='salary'>
+            3千~6千/月
+          </view>
+        </view>
+        <view class='required'>
+          <text>地址：</text>
+          <text>洪山区万维</text>
+          <text class='time'>2018/12/21</text>
+        </view>
+        <view class='addressBox clearfix'>
+          <text class='address'>咸宁市电焊公司</text>
+          <text class='time'>
+            <text>招聘人数：</text>
+          <text>6</text>
+          <text>人</text>
+          </text>
+        </view>
+      </view>
+
+    
+
+     
+    </view>
+  </view>
+
+</view>

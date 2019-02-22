@@ -1,0 +1,144 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar bind:myevent='onMyevent' navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view wx:if="{{show}}" class='learnlit'>
+    <view class="list" wx:for="{{list}}" wx:key="index">
+      <view class="item" courseId = "{{item.courseId}}" studyNum = "{{item.studyNum}}">
+        <view class="item_title">
+          <image class="iconfont" src='{{item.icon}}' mode='widthFix'></image>
+          <!-- <text class="iconfont" :class="{{item.iconfont}}"></text>  -->
+          {{item.courseName}}
+        </view>
+        <view class="item_view clearfix">
+          <view class="imagebox">
+            <image src='{{item.imgSrc}}'></image>
+          </view>
+          <view class="decbox">
+            {{item.details}}......
+          </view>
+          <view class="operatebox">
+            <text bindtap="golearnList">学习</text>
+            <text bindtap="goEvaleating">评测</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{!show}}" class='livelist'>
+    <view bindtap='goLive' class='liveBox clearfix'>
+      <view class='left'>
+        <view class='living'>
+          <text>直播中</text>
+          <view class='liveimg'>
+            <image src='../../images/live.png' mode='aspectFit'></image>
+            <view class='line'></view>
+          </view>
+        </view>
+        <view wx:if="{{false}}" class='living wating'>
+          <view>16:00</view>
+          <view>12月21日</view>
+          <view class='watingimg'>
+            <view class='line'></view>
+          </view>
+        </view>
+      </view>
+      <view class='right'>
+        <view class='rightitem clearfix'>
+          <view class='rightitemImgbox'>
+            <image src='../../images/1.jpg'></image>
+          </view>
+          <view class='rightitemdecBox'>
+            <view class='courser'>
+              电焊实操教学
+            </view>
+            <view class='teacher'>
+              <text>主讲人：</text>
+              <text>王老师</text>
+            </view>
+            <view class='liveTime'>
+              <text>直播时间:</text>
+              <text>13：00~17：00</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+     <view bindtap='goLive' class='liveBox clearfix'>
+      <view class='left'>
+        <view class='living'>
+          <text>直播中</text>
+          <view class='liveimg'>
+            <image src='../../images/live.png' mode='aspectFit'></image>
+            <view class='line'></view>
+          </view>
+        </view>
+        <view wx:if="{{false}}" class='living wating'>
+          <view>16:00</view>
+          <view>12月21日</view>
+          <view class='watingimg'>
+            <view class='line'></view>
+          </view>
+        </view>
+      </view>
+      <view class='right'>
+        <view class='rightitem clearfix'>
+          <view class='rightitemImgbox'>
+            <image src='../../images/1.jpg'></image>
+          </view>
+          <view class='rightitemdecBox'>
+            <view class='courser'>
+              电焊实操教学
+            </view>
+            <view class='teacher'>
+              <text>主讲人：</text>
+              <text>王老师</text>
+            </view>
+            <view class='liveTime'>
+              <text>直播时间:</text>
+              <text>13：00~17：00</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+     <view class='liveBox clearfix'>
+      <view class='left'>
+        <view wx:if="{{false}}" class='living'>
+          <text>直播中</text>
+          <view class='liveimg'>
+            <image src='../../images/live.png' mode='aspectFit'></image>
+            <view class='line'></view>
+          </view>
+        </view>
+        <view class='living wating'>
+          <view>16:00</view>
+          <view>12月21日</view>
+          <view class='watingimg'>
+            <view class='line'></view>
+          </view>
+        </view>
+      </view>
+      <view class='right'>
+        <view class='rightitem clearfix'>
+          <view class='rightitemImgbox'>
+            <image src='../../images/1.jpg'></image>
+          </view>
+          <view class='rightitemdecBox'>
+            <view class='courser'>
+              电焊实操教学
+            </view>
+            <view class='teacher'>
+              <text>主讲人：</text>
+              <text>王老师</text>
+            </view>
+            <view class='liveTime'>
+              <text>直播时间:</text>
+              <text>13：00~17：00</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,193 @@
+.banner {
+  height: 350rpx;
+  margin-top: 25rpx;
+  width: 100%;
+}
+
+swiper {
+  height: 100%;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+.content, .recommendBoxItem {
+  padding: 0 40rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.recommendBoxItem {
+    padding: 20rpx 40rpx;
+}
+/* 课程 */
+
+.course {
+  position: relative;
+  margin: 10rpx 0;
+}
+
+.course image {
+  height: 30rpx;
+  width: 22rpx;
+  margin-right: 12rpx;
+}
+
+.courseCommend {
+  font-size: 28rpx;
+  color: #1a1a1a;
+}
+
+.moreCourse {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #666;
+}
+
+.moreCourse text {
+  font-size: 24rpx;
+}
+
+.moreCourse image {
+  height: 19rpx;
+  width: 15rpx;
+  margin-left: 10rpx;
+}
+
+/* 列表 */
+
+.item {
+  position: relative;
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 45rpx;
+  padding-top: 30rpx;
+}
+
+.item>view {
+  float: left;
+}
+
+.imgbox image {
+  width: 245rpx;
+  height: 170rpx;
+  margin-right: 10rpx;
+  border-radius: 5px;
+}
+
+.industrydec {
+  position: relative;
+  line-height: 58rpx;
+}
+
+.decbox {
+  width: calc(100% - 255rpx);
+}
+
+.industrydec .industry {
+  color: #4d4d4d;
+  font-size: 28rpx;
+}
+
+.industrydec .num {
+  position: absolute;
+  top: 12rpx;
+  right: 0;
+  padding: 0 15rpx;
+  display: block;
+  border-radius: 5px;
+  font-size: 20rpx;
+  line-height: 34rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #1b429e;
+}
+
+.detail {
+  color: #808080;
+  font-size: 22rpx;
+  line-height: 36rpx;
+}
+
+.operation button {
+  position: absolute;
+  bottom: 25rpx;
+  right: 20rpx;
+  border: 1px solid #1b429e;
+  color: #1b429e;
+  font-size: 22rpx;
+  line-height: 44rpx;
+  background-color: #fff;
+}
+
+/* 岗位推荐 */
+
+.recommendBox {
+  background-color: #f0f0f0;
+}
+
+.recommendBoxItem {
+  background-color: #fff;
+  margin-bottom: 5rpx;
+  padding-bottom: 10rpx;
+}
+
+.jobBox {
+  line-height: 55rpx;
+}
+
+.jobType {
+  color: #0f0f0f;
+  font-size: 30rpx;
+  float: left;
+  max-width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.salary {
+  color: #f45549;
+  font-size: 26rpx;
+  float: right;
+  margin-right: 15rpx;
+}
+
+.required {
+  font-size: 22rpx;
+  line-height: 48rpx;
+  color: #a3a3a3;
+  position: relative;
+}
+
+.required .time {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.required .address {
+  font-size: 22rpx;
+  color: #a3a3a3;
+}
+
+.addressBox {
+  position: relative;
+}
+
+.address {
+  color: #4d4d4d;
+  font-size: 28rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.addressBox .time {
+  color: #666;
+  font-size: 26rpx;
+  position: absolute;
+  right: 0;
+  bottom: 5rpx;
+}

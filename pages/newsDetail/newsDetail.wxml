@@ -1,0 +1,43 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+    <view class="main">
+       <view class="content">
+         <view class="videoBox">
+           <image src="../../images/1.jpg" mode='widthFix'></image>  
+         </view>
+         <view class="list">
+           <view class="item">
+             <view class="item_order">
+               <text>1</text>
+                <text>积分卡设计费</text>
+             </view>
+             <view class="item_content">达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+           </view>
+            <view class="item">
+             <view class="item_order">
+               <text>1</text>
+                <text>积分卡设计费</text>
+             </view>
+             <view class="item_content">达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+           </view>
+           <view class="item">
+             <view class="item_order">
+               <text>1</text>
+                <text>积分卡设计费</text>
+             </view>
+             <view class="item_content">达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+           </view>
+            <view class="item">
+             <view class="item_order">
+               <text>1</text>
+                <text>积分卡设计费</text>
+             </view>
+             <view class="item_content">达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+           </view>
+         </view>
+       </view>
+    </view>
+  
+</view>

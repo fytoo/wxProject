@@ -1,0 +1,36 @@
+<!--pages/find/find.wxml-->
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view id='checkbox'>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:key="index" wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+        <text>{{item.value}}</text>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class='list'>
+    <view class='item clearfix' wx:key="index" wx:for="{{list}}" bindtap='gonewsDetail' id="{{index}}">
+      <view class='decBox'>
+        <view class='decTitle'>
+          {{item.title}}......
+        </view>
+        <view class='viewNum'>
+          <label class='Num'>
+            <image src='../../images/viewNum.png'></image>
+            {{item.lookNum}}
+          </label>
+          <label class='Type'>
+            {{item.typeName}}
+          </label>
+
+        </view>
+      </view>
+      <view class='imgBox'>
+        <image src='../../images/1.jpg' mode='widthFix'></image>
+      </view>
+    </view>
+  </view>
+</view>

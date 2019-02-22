@@ -1,0 +1,39 @@
+<!--pages/my/my.wxml-->
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view>
+    <view class="userBox clearfix">
+      <view class="userimage">
+        <image src="../../images/1.jpg"> </image>
+      </view>
+      <view class="userInfo">
+        <view class="userName">小乐子</view>
+        <view class="usercard">411408199511138716</view>
+      </view>
+    </view>
+    <view class="typeSelect">
+      <view class='itemBox clearfix'>
+        <view wx:for='{{list}}' :key="index" class='item' data-index='{{index}}' bindtap='goMytrain'>
+          <view class="iconBox">
+            <image class="icon iconfont" src='{{item.imgSrc}}'></image>
+          </view>
+          <view class="name">{{item.course}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="listOptions">
+      <view wx:for="{{listOptions}}" class="options">
+        <view>
+          <text class="optionsDec">{{item.optionsDec}}</text>
+          <image class="optionsIcon" src='{{item.imgSrc}}'></image>
+        </view>
+      </view>
+    </view>
+
+    <view class='operation'>
+        <button>退出登录</button>
+    </view>
+  </view>
+</view>

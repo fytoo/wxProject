@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<scroll-view class="container" style='margin-top: {{height}}px'>
+  <view class='banner'>
+    <swiper current="{{current}}" circular="true" previous-margin="50rpx" next-margin="50rpx" indicator-color="#000" indicator-active-color="#ffffff" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='content'>
+    <!-- 课程 -->
+    <view class='course clearfix'>
+      <image src='../../images/tuijian.png'></image>
+      <text class='courseCommend'>课程推荐</text>
+      <navigator url="/pages/learn/learn" open-type="switchTab" hover-class="other-navigator-hover" class='moreCourse'>
+        <text>更多课程</text>
+        <image src='../../images/more.png'></image>
+      </navigator>
+    </view>
+    <!-- 课程结束 -->
+    <!-- 列表 -->
+    <view class='list'>
+      <view class='item clearfix' wx:for="{{data.courseData}}" id='{{index}}'>
+        <view class='imgbox'>
+          <image src='../../images/1.jpg'></image>
+          <!-- <image src='{{item.photo}}'></image> -->
+        </view>
+        <view class='decbox'>
+          <view class='industrydec'>
+            <text class='industry'>{{item.name}}</text>
+            <text class='num'>{{item.number}}人学习</text>
+          </view>
+          <view class='detail'>
+           {{item.details}}......
+          </view>
+        </view>
+        <view class='operation'>
+          <button>学习</button>
+        </view>
+      </view>
+
+     
+
+    </view>
+    <!-- 列表结束 -->
+    <!-- 岗位推荐 -->
+    <view class='course clearfix'>
+      <image src='../../images/tuijian.png'></image>
+      <text class='courseCommend'>岗位推荐</text>
+      <navigator url="/pages/JobsRecommended/JobsRecommended" hover-class="navigator-hover" class='moreCourse'>
+        <text>更多推荐</text>
+        <image src='../../images/more.png'></image>
+      </navigator>
+    </view>
+  </view>
+  <!-- 岗位推荐结束 -->
+  <view class='recommendBox'>
+    <view class='recommendBoxItem' wx:for="{{data.postData}}" id='{{index}}'>
+      <view class='jobBox clearfix'>
+        <view class='jobType'>
+          <!-- 电焊工 -->
+          {{item.name}}
+        </view>
+        <view class='salary'>
+         {{item.salary}}
+          <!-- 3千~6千/月 -->
+        </view>
+      </view>
+      
+      <view class='required clearfix'>
+        <text class='address'>地址：{{item.address}}</text>
+        <text class='time'>{{item.time}}</text>
+
+      </view>
+      <view class='addressBox clearfix'>
+        <text class='address'>{{item.company}}</text>
+        <text class='time'>招聘人数:{{item.number}}</text>
+
+      </view>
+    </view>
+
+   
+  </view>
+</scroll-view>

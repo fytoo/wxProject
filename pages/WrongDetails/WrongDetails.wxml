@@ -1,0 +1,103 @@
+<!--pages/evaluating/evaluating.wxml-->
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class="main">
+    <view class="testBox">
+      <view class="tea iconfont icon-cup-of-tea"></view>
+      <view class="testHeader">
+        <view class="typebox">
+          <lable class="order ">1,</lable>
+          <lable class="type">多选题</lable>
+        </view>
+        <view class="title"> 发生看来大幅拉升阶段法拉第十分了解啊送到了附近啊都是浪费</view>
+      </view>
+      <view class="checkBox">
+        <view>
+          <lable class="option">A</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">B</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">C</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">B</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">C</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+      </view>
+      <view class='tip'>
+        *已选择"
+        <text>AC</text>"; 正确答案为"
+        <text>BD</text>"
+      </view>
+    </view>
+
+     <view class="testBox">
+      <view class="tea iconfont icon-cup-of-tea"></view>
+      <view class="testHeader">
+        <view class="typebox">
+          <lable class="order ">1,</lable>
+          <lable class="type">多选题</lable>
+        </view>
+        <view class="title"> 发生看来大幅拉升阶段法拉第十分了解啊送到了附近啊都是浪费</view>
+      </view>
+      <view class="checkBox">
+        <view>
+          <lable class="option">A</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">B</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">C</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">B</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+        <view>
+          <lable class="option">C</lable>
+          <lable class="optionAns">
+            激发了撒酒疯
+          </lable>
+        </view>
+      </view>
+      <view class='tip'>
+        *已选择"
+        <text>AC</text>"; 正确答案为"
+        <text>BD</text>"
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+/* pages/myTrain/muyTrain.wxss */
+
+.container>view{
+  width: 100%;
+}
+
+.MyTrainBox {
+  position: relative;
+  margin: 0 40rpx 40rpx 40rpx;
+  box-shadow: 0 0 10px 5px #eaeffa;
+  padding: 0 20rpx;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 185rpx;
+}
+.MyTrainBox image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.MyTrainType {
+  line-height: 65rpx;
+}
+
+.time {
+  float: right;
+  font-size: 26rpx;
+  color: #333333;
+}
+.subject{color: #fff;}
+.time span {
+  margin-left: 10rpx;
+}
+
+.tel {
+  width: 94%;
+  position: absolute;
+  bottom: 20rpx;
+  font-size: 26rpx;
+  line-height: 54rpx;
+  color: #d0d5e6;
+}
+.Usetime{position: absolute;right: 0;font-size: 26rpx;color: #4d4d4d;}
+

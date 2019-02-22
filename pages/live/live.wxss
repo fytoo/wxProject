@@ -1,0 +1,46 @@
+/* pages/learnListitem/learnListitem.wxss */
+
+.main {
+  color: #4d4d4d;
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 20rpx 15rpx 60rpx 15rpx; */
+}
+
+.content {
+  position: relative;
+  padding: 35rpx 20rpx;
+  font: 28rpx/64rpx "微软雅黑";
+}
+
+.content .videoBox {
+  height: 350rpx;
+}
+
+.content .videoBox video {
+  height: 100% !important;
+  width: 100%;
+}
+
+.content .videoBox .item {
+  font: 26rpx/42rpx "微软雅黑";
+}
+
+
+.list{background-color: #f0f0f0}
+.item {
+  background-color: #fff;
+  margin-bottom: 25rpx;
+  padding:0 25rpx 25rpx 25rpx;
+}
+
+.item_order text {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 48rpx;
+}
+
+.item_content {
+  line-height: 38rpx;
+  font-size: 24rpx;
+}

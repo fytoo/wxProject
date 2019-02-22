@@ -1,0 +1,71 @@
+/* pages/myTrain/muyTrain.wxss */
+
+.container>view{
+  width: 100%;
+}
+
+.MyTrainBox {
+  margin: 0 10rpx;
+  box-shadow: 0 0 10px 5px #eaeffa;
+  padding: 0 20rpx;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+
+.MyTrainType {
+  line-height: 65rpx;
+}
+
+.subject {
+  font-size: 34rpx;
+  color: #0f0f0f;
+}
+
+.time {
+  float: right;
+  font-size: 26rpx;
+  color: #8c8c8c;
+}
+
+.time span {
+  margin-left: 10rpx;
+}
+
+.address {
+  font: 26rpx/76rpx "微软雅黑";
+}
+
+.address .icon {
+  color: #e4b781;
+  margin-right: 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+}
+
+.tel {
+  font-size: 20rpx;
+  line-height: 54rpx;
+}
+
+.tel .icon {
+  display: inline-block;
+  color: #fff;
+  margin-right: 20rpx;
+  height: 32rpx;
+  width: 32rpx;
+}
+.tel image,.icon image{
+  width: 100%;
+  height: 100%;
+}
+.signIn {
+  background-color: #f5f5f5;
+}
+
+.signIn view {
+  background-color: #fff;
+  margin: 20rpx 0;
+  padding-left: 40rpx;
+  font: 26rpx/125rpx "微软雅黑";
+}

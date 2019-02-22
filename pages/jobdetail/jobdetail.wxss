@@ -1,0 +1,80 @@
+/* pages/jobdetail/jobdetail.wxss */
+
+.infoBox {
+  box-shadow: 0 0 10px 5px #eaeffa;
+  margin: 20rpx;
+  border-radius: 5px;
+}
+
+.infoBox>view {
+  margin: 0 20rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  line-height: 76rpx;
+  color: #1a1a1a;
+}
+
+.infoNum {
+  position: relative;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  color: #808080;
+}
+
+.infoNum .time {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.salary {
+  font-size: 26rpx;
+  color: #f45549;
+  line-height: 62rpx;
+}
+
+.address {
+  color: #808080;
+  font-size: 22rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #e1e1e1;
+  margin: 0 !important;
+}
+
+.address image {
+  width: 26rpx;
+  height: 31rpx;
+  margin: 0 20rpx;
+}
+
+.jobDecbox {
+  margin: 0 40rpx;
+}
+
+.jobDectitle {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #1a1a1a;
+  line-height: 70rpx;
+}
+
+.jobDectitle image {
+  height: 32rpx;
+  width: 32rpx;
+  margin-right: 15rpx;
+}
+.jobDectitle text{
+  position: relative;
+}
+/* .jobDectitle text{
+  display: block;
+  content: "";
+  
+} */
+.jobdec {
+  font-size: 26rpx;
+  line-height: 62rpx;
+  color: #4d4d4d;
+}

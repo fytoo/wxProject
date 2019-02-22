@@ -1,0 +1,86 @@
+/* pages/learnList/learnList.wxss */
+
+.content {
+  position: relative;
+  padding: 35rpx 20rpx;
+  font: 28rpx/64rpx "微软雅黑";
+}
+
+.videoBox {
+  height: 350rpx;
+}
+
+.videoBox image {
+  height: 350rpx !important;
+  width: 100%;
+}
+
+.item  .box {
+  position: relative;
+}
+
+.item .item_order {
+  font: 30rpx/46rpx "微软雅黑";
+  color: #333;
+}
+
+.item .item_num {
+  background-color: #1b429e;
+  position: absolute;
+  top: 15rpx;
+  right: 30rpx;
+  font: 18rpx/32rpx "微软雅黑";
+  padding: 0 15rpx;
+  color: #fff;
+  border-radius: 20rpx;
+}
+
+.item .item_content {
+  color: #808080;
+  font: 26rpx/42rpx "微软雅黑";
+}
+
+.operationBox {
+  padding-top: 20rpx;
+  background-color: #f0f0f0;
+}
+
+.firstMeun {
+  position: relative;
+  text-indent: 2em;
+  font: 30rpx/70rpx "微软雅黑";
+  background-color: #fff;
+}
+
+.firstMeun .more {
+  position: absolute;
+  right: 40rpx;
+  top: 15rpx;
+}
+.firstMeun .up,.firstMeun .smallmore{
+  height: 44rpx;
+  width: 44rpx;
+}
+.secondeMeun {
+  position: relative;
+  text-indent: 2em;
+  font: 30rpx/80rpx "微软雅黑";
+  background-color: #f3f7ff;
+  padding: 0 30rpx;
+}
+
+.secondeMeun > div {
+  border: 1px solid #e1e1e1;
+}
+
+.secondeMeun .more {
+  position: absolute;
+  right: 40rpx;
+  top: 15rpx;
+   height: 44rpx;
+  width: 44rpx;
+}
+
+.active {
+  background-color: #fafafa !important;
+}

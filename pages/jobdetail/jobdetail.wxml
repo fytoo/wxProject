@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<scroll-view class="container" style='margin-top: {{height}}px'>
+  <view class='infoBox'>
+    <view class='title'>咸宁市电焊科技有限公司</view>
+    <view class='infoNum'>
+      <text>
+          <text> 招聘人数：</text>
+           <text> 6人 </text>
+      </text>
+      <text class='time'>2018/12/21</text>
+    </view>
+    <view class='salary'>
+      3千~6千/月
+    </view>
+    <view class='address'>
+      <image src='../../images/greenaddress.png'> </image>
+      <text>咸宁市通山县</text>
+    </view>
+  </view>
+  <view class='jobDecbox'>
+      <view class='jobDectitle'>
+        <image src='../../images/position.png'></image>
+        <text>岗位描述</text>
+      </view>
+      <view class='jobdec'>
+        大家佛咯就爱上了法大师傅爱的世界里发大水了几分大师立法附近的萨拉附近lads解放啦的身份第四届立法ADSL看
+      </view>
+  </view>
+  <view class='jobDecbox'>
+      <view class='jobDectitle'>
+        <image src='../../images/compant.png'></image>
+        <text>公司简介</text>
+      </view>
+      <view class='jobdec'>
+        大家佛咯就爱上了法大师傅爱的世界里发大水了几分大师立法附近的萨拉附近lads解放啦的身份第四届立法ADSL看
+      </view>
+  </view>
+</scroll-view>

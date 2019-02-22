@@ -1,0 +1,30 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class="main">
+    <view class="content">
+      <view class="videoBox">
+        <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+          binderror="videoErrorCallback" controls page-gesture objectFit="fill"></video>
+      </view>
+
+    </view>
+  </view>
+  <view class="list">
+    <view class="item">
+      <view class="item_order">
+        <text>课程简介：</text>
+      </view>
+      <view class="item_content">达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+    </view>
+
+    <view class="item">
+      <view class="item_order">
+        <text>课程简介：</text>
+      </view>
+      <view class="item_content">达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景达芙妮萨迪克金凤花开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+    </view>
+
+  </view>
+</view>

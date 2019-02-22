@@ -1,0 +1,117 @@
+.schoolInfo {
+  padding: 35rpx 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.container {
+  background-color: #f0f0f0;
+}
+
+.school>view {
+  float: left;
+}
+
+.schoolimg image {
+  width: 255rpx;
+  height: 300rpx;
+  margin-right: 30rpx;
+}
+
+.schoolRight {
+  width: calc(100% -285rpx);
+}
+
+.schoolName {
+  font-size: 30rpx;
+  color: #1a1a1a;
+  line-height: 64rpx;
+}
+
+.schoolCourse {
+  color: #747474;
+  font-size: 26rpx;
+  line-height: 84rpx;
+}
+
+.schoolCourse image, .schooladdress image, .schoolTel image,.itemAddress>view:nth-of-type(1) image, .itemAddress>view:nth-of-type(2) image,.itemNum>view:nth-of-type(1) image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+
+.schooladdress {
+  color: #666;
+  font-size: 26rpx;
+  line-height: 84rpx;
+}
+
+.schoolTel {
+  font-size: 22rpx;
+  color: #4d4d4d;
+  line-height: 84rpx;
+}
+
+.schoolDectitle {
+  font-size: 32rpx;
+  line-height: 48rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.schoolDectext {
+  font-size: 24rpx;
+  line-height: 38rpx;
+  color: #808080;
+}
+
+.list {
+  margin-top: 20rpx;
+  padding: 0 25rpx;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.item {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.item>view {
+  position: relative;
+}
+
+.itemType {
+  line-height: 60rpx;
+}
+
+.itemType>text:nth-of-type(1) {
+  font-size: 30rpx;
+  color: #0f0f0f;
+}
+
+.itemType .time {
+  font-size: 26rpx;
+  position: absolute;
+  right: 0;
+  color: #4d4d4d;
+}
+.itemAddress>view,.itemNum>view{float: left;}
+.itemNum{font-size: 24rpx;line-height: 68rpx;color: #747474;}
+.itemAddress{font-size: 24rpx;line-height: 54rpx;color: #747474;}
+.itemAddress>view:nth-of-type(2),.itemNum>view:nth-of-type(2){
+  position: absolute;
+  right: 0;
+}
+.itemAddress>view:nth-of-type(2) text{
+  color: #4d4d4d;
+}
+.itemNum>view:nth-of-type(2) text{
+  color: #fff;
+  padding: 0 15rpx;
+  font-size: 18rpx;
+  line-height: 34rpx;
+  border-radius: 10rpx;
+  background-color: #1b429e;
+}

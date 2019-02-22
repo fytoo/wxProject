@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/learn/learn",
+    "pages/news/news",
+    "pages/my/my",
+    "pages/find/find",
+    "pages/evaluating/evaluating",
+    "pages/map/map",
+    "pages/jobdetail/jobdetail",
+    "pages/JobsRecommended/JobsRecommended",
+    "pages/newsDetail/newsDetail",
+    "pages/myTrain/myTrain",
+    "pages/learnListitem/learnListitem",
+    "pages/learnList/learnList",
+    "pages/radar/index",
+    "pages/learnListitemDetail/learnListitemDetail",
+    "pages/WrongDetails/WrongDetails",
+    "pages/mywrong/mywrong",
+    "pages/live/live",
+    "pages/schoolDetail/schoolDetail"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#cdcdcd",
+    "navigationStyle": "custom"
+    
+  },
+  "tabBar": {
+    "color": "#565656",
+    "selectedColor": "#1b429e",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/select_index.png"
+      },
+      {
+        "pagePath": "pages/learn/learn",
+        "text": "学习",
+        "iconPath": "images/learn.png",
+        "selectedIconPath": "images/select_learn.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "images/news.png",
+        "selectedIconPath": "images/select_news.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "images/find.png",
+        "selectedIconPath": "images/select_find.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/select_my.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
