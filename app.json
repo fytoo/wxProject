@@ -26,7 +26,7 @@
     "pages/live/live",
     "pages/schoolDetail/schoolDetail",
     "pages/newView/newView",
-    "pages/enroll/enroll1"
+    "pages/enroll/enroll"
   ],
   "window": {
     "backgroundTextStyle": "dark",
