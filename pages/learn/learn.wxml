@@ -12,14 +12,14 @@
         </view>
         <view class="item_view clearfix">
           <view class="imagebox">
-            <image src='{{item.imgSrc}}'></image>
+            <image src='{{item.picture}}'></image>
           </view>
           <view class="decbox">
             {{item.details}}......
           </view>
           <view class="operatebox">
-            <text bindtap="golearnList">学习</text>
-            <text bindtap="goEvaleating">评测</text>
+            <text data-name='{{item.courseName}}' data-courseId='{{item.courseId}}' data-details='{{item.details}}' data-studyNum='{{item.studyNum}}' data-picture='{{item.picture}}'  bindtap="golearnList">学习</text>
+            <text data-id='{{item.courseId}}' bindtap="goEvaleating">评测</text>
           </view>
         </view>
       </view>

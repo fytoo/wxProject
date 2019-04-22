@@ -2,5 +2,6 @@
   "usingComponents": {
     "nav-bar": "../../navbar/navbar"
   },
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 1
 }

@@ -6,30 +6,42 @@
   <view class='searchBox'>
     <view class='clearfix'>
       <view class='selectBox'>
-        <picker-view indicator-style=" height: 38rpx;" indicator-class="indicator-class" style="height: 38rpx;" value="{{value}}" bindchange="bindChange">
-          <picker-view-column>
-            <view wx:for="{{years}}">{{item}}</view>
-          </picker-view-column>
-        </picker-view>
+  <picker mode = "selector" bindchange="bindPickerChange" value="{{project[idx].id}}" range="{{project}}" range-key="{{'val'}}">
+    <view class="picker picker1">
+      {{project[idx].val}}<text class='down'></text>
+    </view>
+</picker>
         <image class='icon' src='../../images/select_icon.png'></image>
       </view>
       <view class='inputBox'>
-        <input bindblur="bindblur" confirm-type="search" type="text" placeholder="请输入课程名称" focus="{{focus}}" />
-        <image src="../../images/search.png" class='inputIcon' mode='widthFix'></image>
+        <input  type="text" placeholder="{{placeholderName}}" value="{{searchName}}"  bindinput ="searchNameInput"/>
+        <image src="../../images/search.png" class='inputIcon' mode='widthFix' bindtap='search'></image>
       </view>
     </view>
   </view>
+  <!-- 专业列表 -->
   <view wx:if="{{courserList}}" class='courselist'>
-    <view bindtap='goshoolDetail' class='item' wx:for="{{list}}">
+    <view  class='item' wx:key="index"  wx:for="{{list}}">
+    
       <view class='itemCourse clearfix'>
-        <text class='CourseName'>{{item.CourseName}}</text>
-        <text class='CourseTime'><text>开课时间：</text> {{item.time}}</text>
+        <text class='CourseName'>{{item.name}}</text>
+        <text class='CourseTime'>最高补贴{{item.subsidy}}</text>
       </view>
       <view class='school'>
         <image src='../../images/school.png' mode='widthFix'></image>
-        <text> {{item.school}}</text>
+        <text> {{item.schoolName}}</text>
       </view>
-      <view class='address clearfix'>
+      <view style='position:relative;line-height:50rpx;'>
+       <view class='school'>
+        <text> 开课时间:{{item.startTime}}</text>
+      </view>
+      <view style="position:absolute;right:0px;bottom:0px;" wx:if="{{item.status==1}}">
+        <text class="signUp"  data-id='{{item.id}}' data-name='{{item.name}}' data-schoolName="{{item.schoolName}}">报名</text>
+      </view>
+        <view wx:else style="position:absolute;right:0px;bottom:0px;"> <text class="signUp"  bindtap='enroll' data-id='{{item.id}}'                data-name='{{item.name}}' data-schoolName="{{item.schoolName}}" >未报名</text> 
+        </view>
+      </view>
+      <!-- <view class='address clearfix'>
         <view class='addressdec'>
           <image src='../../images/address.png' mode='widthFix'></image>
           <text>{{item.address}}</text>
@@ -38,21 +50,21 @@
           <image src='../../images/tel.png' mode='widthFix'></image>
           <text>{{item.tel}}</text>
         </view>
-      </view>
+      </view> -->
     </view>
   </view>
-
+  <!-- 学校列表 -->
   <view class='schoollist' wx:if="{{schoolList}}">
-    <view bindtap='goshoolDetail' class='item' wx:for="{{schoollist}}">
+    <view data-name="{{item.name}}" data-classNum="{{item.classNum}}"  data-photo="{{item.photo}}" data-address="{{item.address}}" data-introduce="{{item.introduce}}" data-id="{{item.id}}" bindtap='goshoolDetail' class='item' wx:key="index" wx:for="{{schoollist}}">
       <view class='itemCourse clearfix'>
-        <text class='CourseName'>{{item.CourseName}}</text>
+        <text class='CourseName'>{{item.name}}</text>
       </view>
       <view class='school'>
         <text>负责人</text>
-        <text> {{item.principal}}</text>
+        <text> {{item.director}}</text>
         <view class='teacherNum'>
             <text>教师人数：</text>
-            <text>{{item.num}}</text>
+            <text>{{item.teacherNum}}</text>
         </view>
       </view>
       <view class='address clearfix'>
@@ -60,10 +72,10 @@
           <image src='../../images/address.png' mode='widthFix'></image>
           <text>{{item.address}}</text>
         </view>
-        <view class='tel'>
+        <!-- <view class='tel'>
           <image src='../../images/tel.png' mode='widthFix'></image>
           <text>{{item.tel}}</text>
-        </view>
+        </view> -->
       </view>
     </view>
   </view>

@@ -13,20 +13,65 @@ Page({
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20,
+    list : []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    wx.showLoading({
+      title: '拼命加载中...'
+    });
+    let data = {
+      pageIndex: 0,
+      pageSize: 10,
+      userId : app.globalData.userId
+    };
+    console.log(data)
+    app.api("/app/myTrain", data).then(res => {
+
+      let code = res.data.code;
+
+      if (code == "200") {
+        wx.hideLoading();
+        let data = res.data.data;
+      
+        this.setData({
+          list: data
+        })
+       
+       
+      } else {
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: res.data.msg,
+          success(res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }
+
+    }).catch(e => {
+      wx.hideLoading();
+      wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
+        title: '获取数据异常',
+        // icon: 'loading',
+        duration: 2000
+      });
+    })
   },
 
   /**

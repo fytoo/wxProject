@@ -1,0 +1,37 @@
+/* pages/changePassword/changePassword.wxss */
+
+.main {
+  width: 560rpx;
+  box-shadow: 0 0 10px 5px #cdcdcd;
+  padding: 0rpx 40rpx 80rpx;
+  border-radius: 5rpx;
+  margin-top: 70rpx;
+}
+
+.main>view {
+  border-bottom: 1rpx solid #d6d7dc;
+  padding-bottom: 20rpx;
+  margin-top: 70rpx;
+  overflow:hidden;
+}
+.main>view>text:nth-child(2){
+  color: #b4b2b2;
+}
+.textClass{
+  float: left;
+}
+.submitBtn {
+  background-color: #1a57a8;
+  text-align: center;
+  color: #fff;
+  font-size: 34rpx;
+  height: 76rpx;
+  line-height: 72rpx;
+  border-radius: 10rpx;
+  padding-bottom: 0 !important;
+  width: 630rpx;
+  margin-top: 70rpx;
+}
+text{
+ font-size: 30rpx;
+}

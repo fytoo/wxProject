@@ -1,0 +1,9 @@
+
+<form bindsubmit="formSubmit" id='2' bindreset="formReset">  
+
+      <view class='caigou_centent'>描述说明(选填)</view>  
+      <textarea class='textarea' placeholder="" name="content" value='{{formdata}}' />  
+  
+     
+      <button class='btn' formType="submit">发布</button>  
+</form>

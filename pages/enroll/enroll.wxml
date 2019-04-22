@@ -1,0 +1,35 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class="main">
+    <view >
+      <text class='textClass'>姓名:</text>
+      <text style="float: right;">{{name}}</text>
+    </view>
+    <view >
+       <text class='textClass'>性别:</text>
+      <text style="float: right;">{{sex}}</text>
+    </view>
+    <view >
+      <text class='textClass'>年龄:</text>
+      <text style="float: right;">{{age}}</text>
+    </view>
+     <view >
+      <text class='textClass'>联系方式:</text>
+      <input  style="float: right;width: 224rpx;font-size: 32rpx;text-align: right;color: #b4b2b2;" value='{{tel}}'></input>
+    </view>
+     <view >
+      <text class='textClass'>报名专业:</text>
+      <text style="float: right;">{{majorName}}</text>
+    </view>
+    <view >
+      <text class='textClass'>报名培训机构:</text>
+      <text style="float: right;">{{schoolName}}</text>
+    </view>
+    <view >
+      <text class='textClass' >报名时间:</text>
+      <text style="float: right;">{{time}}</text>
+    </view>
+
+  </view>
+  <view bindtap='submit' class='submitBtn'>提交</view>
+</view>

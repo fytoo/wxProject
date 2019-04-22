@@ -8,11 +8,14 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"uglifyFileName": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
-	"appid": "wx45add92bf4a4c23b",
+	"libVersion": "2.6.5",
+	"appid": "wx99302adf54d08e80",
 	"projectname": "%E5%BE%AE%E4%BF%A1",
 	"isGameTourist": false,
 	"scripts": {
@@ -20,6 +23,8 @@
 		"beforePreview": "",
 		"beforeUpload": ""
 	},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

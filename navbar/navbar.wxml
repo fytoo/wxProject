@@ -13,7 +13,7 @@
   <view class='learnBox' wx:if='{{navbarData.learnBtn}}' style='line-height: {{height*2 + 44}}px;'>
     <view bindtap='selectBtn' class='select'>
       <text class='{{num==1?"active":""}}' data-num='1'>学习</text>
-      <text class='{{num==2?"active":""}}' data-num='2'>直播</text>
+      <!-- <text class='{{num==2?"active":""}}' data-num='2'>直播</text> -->
     </view>
   </view>
   <view style='display: flex; justify-content: space-around;flex-direction: column;'>

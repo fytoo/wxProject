@@ -14,10 +14,14 @@ Page({
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20,
+    postList : [],
+    pageIndex:1,
+    total:0
   },
-  gojobdetail(){
+  gojobdetail(e){
+    console.log(e)
     wx.navigateTo({
-      url: '../jobdetail/jobdetail',
+      url: '../jobdetail/jobdetail?id=' + e.currentTarget.dataset.id,
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
@@ -27,7 +31,48 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '拼命加载中...'
+    });
+    let postListdata = {
+      pageIndex: 0,
+      pageSize: 10,
+    };
+    app.api("app/postList", postListdata).then(res => {
+      
+      let code = res.data.code;
+      if (code == "200") {
+        wx.hideLoading();
+        let data = res.data.data;
+        let { pageIndex, pageCount, postList} = data;
 
+        this.setData({
+          postList: postList,
+          total: data.pageCount
+        })
+      } else {
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: data.msg,
+          success(res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }
+
+    }).catch(e => {
+      wx.hideLoading();
+      wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
+        title: '获取数据异常',
+        // icon: 'loading',
+        duration: 2000
+      });
+    })
   },
 
   /**
@@ -69,7 +114,54 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    //分页处理
+    let index = this.data.total % 10;
+    let total = index == 0 ? parseInt(this.data.total / 10) == 0 ? 1 : parseInt(this.data.total / 10) : parseInt(this.data.total / 10) + 1;
+    if (total > this.data.pageIndex) {
+      this.setData({
+        pageIndex: this.data.pageIndex + 1
+      })
+      let params = {
+        pageIndex: this.data.pageIndex,
+        pageSize: 10,
+      }
+      wx.showLoading({
+        title: '拼命加载中...'
+      });
+      app.api("app/postList", params).then(res => {
 
+        let code = res.data.code;
+        if (code == "200") {
+          wx.hideLoading();
+          let data = res.data.data;
+          this.setData({
+            postList: this.data.postList.concat(data.postList),
+            total: data.pageCount
+          })
+        } else {
+          wx.hideLoading();
+          wx.showModal({
+            title: '温馨提示',
+            content: data.msg,
+            success(res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
+
+      }).catch(e => {
+        wx.hideLoading();
+        wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
+          title: '获取数据异常',
+          // icon: 'loading',
+          duration: 2000
+        });
+      })
+    }
   },
 
   /**

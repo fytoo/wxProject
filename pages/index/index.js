@@ -10,51 +10,82 @@ Page({
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20,
-    imgUrls: [
-      '../../images/1.jpg',
-      '../../images/2.jpg',
-      '../../images/3.jpg'
-    ],
-    data : [],
+   
+    data: [],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000,
+  
     activeId: "activeId",
-
+    url: 'https://zypx.hbwwcc.com:8080/',
   },
   changeIndicatorDots(e) {
     this.setData({
       indicatorDots: !this.data.indicatorDots
     })
   },
+  swipclick:function(e){
+    console.log(e.currentTarget.dataset);
+    wx.navigateTo({
+      url: '../newView/newView?id=' + e.currentTarget.dataset.id, //
+    }) 
+    
+  },
+  golearnList(e) {
+    wx.navigateTo({
+      url: '../learnList/learnList?studyNum=' + e.currentTarget.dataset.studynum + '&details=' + e.currentTarget.dataset.details + '&picture=' + e.currentTarget.dataset.picture + '&courseId=' + e.currentTarget.dataset.courseid + '&name=' + e.currentTarget.dataset.name,
+      success: function () {
+
+      },
+      fail: function () {
+
+      },
+      complete: function () {
+
+      }
+    })
+    7
+  },
   onLoad() {
     // console.log(this.data.height);
     wx.showLoading({
       title: '拼命加载中...'
     });
-    let userId;
+
     wx.getStorage({
       key: 'myInfo',
       success(res) {
-        // console.log(res.data);
-        userId = res.data.data.id;
+        wx.setStorageSync('token', res.data.data.token);
       }
     });
-
-    app.fetch("/app/indexData", userId).then(res => {
+   
+    
+    app.api("app/indexData", { userId: app.globalData.userId }).then(res => {
       // console.log(res.data);
-      let data = res.data.data;
+     
       let code = res.data.code;
-      data.courseData.map((val,index)=>{
-        val.details = val.details.slice(0, 50);//课程培训的字符串截取
-      })
-
       if (code == "200") {
         wx.hideLoading();
+       
+       
+        //课程培训
+        res.data.data.courseData.map((val, index) => {
+          if (val.details.length>30){
+            val.details = val.details.slice(0, 30) + '......';//课程培训的字符串截取
+          }
+        
+          val.photo = this.data.url+val.photo;
+              });
+        //跑马灯
+        res.data.data.policyData.map((val, index) => {
+          val.photo =  this.data.url+ val.photo;
+        });
+        console.log(res.data.data);
         this.setData({
-          data: data,
+          data: res.data.data,
         })
+        console.log(this.data);
       } else {
         wx.hideLoading();
         wx.showModal({
@@ -78,6 +109,8 @@ Page({
         duration: 2000
       });
     })
+
+
 
 
   },

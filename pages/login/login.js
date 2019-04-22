@@ -19,6 +19,7 @@ Page({
       userPwd: e.detail.value
     })
   },
+ 
   //获取用户输入的密码
   loginBtnClick: function(e) {
     wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
@@ -31,10 +32,13 @@ Page({
       password: this.data.userPwd,
       type: 1
     };
-    app.fetch("/app/userLogin", data).then(res => {
-      console.log(res.data);
+    app.login("app/userLogin", data).then(res => {
+      // console.log(res.data);
       let data = res.data;
       wx.setStorageSync('myInfo', data);
+     
+      app.globalData.userId = res.data.data.id;
+      // console.log(app.globalData.userId)
       if (data.code == "200") {
         wx.switchTab({
           url: '../index/index',
@@ -69,7 +73,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+   
   },
 
   /**

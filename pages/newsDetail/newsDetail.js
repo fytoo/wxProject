@@ -20,7 +20,52 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.showLoading({
+      title: '拼命加载中...'
+    });
+  
+    let data = {
+      id: options.id,
+      userId: app.globalData.userId
+    }
+    app.api("/app/newsIn", data).then(res => {
+      let code = res.data.code;
+      // console.log(res.data);
+      if (code == "200") {
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: '此处返回页面链接，暂无法处理。',
+          success(res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      } else {
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: data.msg,
+          success(res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }
+    }).catch(e => {
+      wx.hideLoading();
+      wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
+        title: '获取数据异常',
+        // icon: 'loading',
+        duration: 2000
+      });
+    })
   },
 
   /**

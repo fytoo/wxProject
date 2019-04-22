@@ -4,20 +4,20 @@
 <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
 <scroll-view class="container" style='margin-top: {{height}}px'>
   <view class='infoBox'>
-    <view class='title'>咸宁市电焊科技有限公司</view>
+    <view class='title'>{{list.name}}</view>
     <view class='infoNum'>
       <text>
           <text> 招聘人数：</text>
-           <text> 6人 </text>
+           <text> {{list.number}} </text>
       </text>
-      <text class='time'>2018/12/21</text>
+      <text class='time'>{{list.time}}</text>
     </view>
     <view class='salary'>
-      3千~6千/月
+     {{list.salary}}
     </view>
     <view class='address'>
       <image src='../../images/greenaddress.png'> </image>
-      <text>咸宁市通山县</text>
+      <text>{{list.address}}</text>
     </view>
   </view>
   <view class='jobDecbox'>
@@ -26,7 +26,7 @@
         <text>岗位描述</text>
       </view>
       <view class='jobdec'>
-        大家佛咯就爱上了法大师傅爱的世界里发大水了几分大师立法附近的萨拉附近lads解放啦的身份第四届立法ADSL看
+       {{list.entails}}
       </view>
   </view>
   <view class='jobDecbox'>
@@ -35,7 +35,7 @@
         <text>公司简介</text>
       </view>
       <view class='jobdec'>
-        大家佛咯就爱上了法大师傅爱的世界里发大水了几分大师立法附近的萨拉附近lads解放啦的身份第四届立法ADSL看
+        {{list.profiles}}
       </view>
   </view>
 </scroll-view>

@@ -6,6 +6,6 @@
     <view class='testBox'>
       <ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
     </view>
-    <button class='next'>立即测试</button>
+    <!-- <button class='next' bindtap='goevaluating'>立即测试</button> -->
   </view>
 </view>

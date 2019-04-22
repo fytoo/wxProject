@@ -1,6 +1,11 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/feedback/feedback",
+    "pages/OpinionResearch/OpinionResearch",
+    "pages/text/text",
+    "pages/changePassword/changePassword",
+    "pages/checkBox/checkBox",
     "pages/index/index",
     "pages/learn/learn",
     "pages/news/news",
@@ -19,8 +24,9 @@
     "pages/WrongDetails/WrongDetails",
     "pages/mywrong/mywrong",
     "pages/live/live",
-    "pages/schoolDetail/schoolDetail"
-    
+    "pages/schoolDetail/schoolDetail",
+    "pages/newView/newView",
+    "pages/enroll/enroll"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -29,7 +35,6 @@
     "navigationBarTextStyle": "black",
     "backgroundColor": "#cdcdcd",
     "navigationStyle": "custom"
-    
   },
   "tabBar": {
     "color": "#565656",
@@ -72,5 +77,6 @@
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -53,10 +53,10 @@
   font: 28rpx/58rpx "微软雅黑";
 }
 
-.checkBox view:hover .option {
+/* .checkBox view:hover .option {
   background-color: #1b429e;
   color: #fff;
-}
+} */
 
 .option {
   width: 40rpx;

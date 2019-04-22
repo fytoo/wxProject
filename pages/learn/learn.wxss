@@ -5,7 +5,9 @@
   /* $titleColor: #4d4d4d; */
   padding: 0 40rpx;
 }
-
+.learnlit{
+  width:100%;
+}
 .item_title {
   text-align: left;
   font-size: 28rpx;

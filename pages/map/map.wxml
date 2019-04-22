@@ -13,6 +13,7 @@
       covers="{{covers}}"
       show-location
       include-points ="{{points}}"
+      bindmarkertap = "clickmarker"
     ></map>
   </view>
 </view>

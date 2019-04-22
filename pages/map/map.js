@@ -9,89 +9,33 @@ Page({
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20,
-    latitude: 23.099994,
-    longitude: 113.324520, 
-    points: [{
-      latitude: 23.10229,
-      longitude: 113.3345211,
-    }, {
-      latitude: 23.00229,
-      longitude: 113.3345211,
-    }],
-    markers: [{
-      id: 1,
-      latitude: 23.099994,
-      longitude: 113.324520,
-      name: 'T.I.T 创意园',
-      width: '18px',
-      height: '28px',
-      iconPath: '../../images/location.png',
-      callout: {
-        content: "  博弈职业技术学院 ",
-        "车牌号": "12345",
-        color: "#333333",
-         fontSize: "18",
-         borderRadius: "8",
-         bgColor: "#ffffff",
-         padding: "5",
-        display: "ALWAYS" 
-//          display	'BYCLICK': 点击显示; 'ALWAYS': 常显	String	
-// textAlign	文本对齐方式。有效值: left, right, center
-      }
-    }, {
-        width: '18px',
-        height: '28px',
-      latitude: 23.099994,
-      longitude: 113.344520,
-      iconPath: '../../images/location.png',
-        callout: {
-          content: "电焊职业技术学院 ",
-          "车牌号": "12345",
-          color: "#333333",
-          fontSize: "18",
-          borderRadius: "8",
-          bgColor: "#ffffff",
-          padding: "5",
-          display: "ALWAYS" 
-          //          display	'BYCLICK': 点击显示; 'ALWAYS': 常显	String	
-          // textAlign	文本对齐方式。有效值: left, right, center
-        }
-
-    }, {
-        width: '18px',
-        height: '28px',
-      latitude: 23.099994,
-      longitude: 113.304520,
-      iconPath: '../../images/location.png',
-        callout: {
-          content: " 厨师职业技术学院 ",
-          "车牌号": "12345",
-          color: "#333333",
-          fontSize: "18",
-          borderRadius: "8",
-          bgColor: "#ffffff",
-          padding: "5",
-          display: "ALWAYS" 
-          //          display	'BYCLICK': 点击显示; 'ALWAYS': 常显	String	
-          // textAlign	文本对齐方式。有效值: left, right, center
-        }
-    }]
+    latitude: 29.8593,
+    longitude: 114.317696,
+    points: [],
+    markers: []
   },
-  onReady: function(e) {
+  onReady: function (e) {
     this.mapCtx = wx.createMapContext('myMap')
   },
-  getCenterLocation: function() {
+  clickmarker(e){
+    wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
+      title: '被点击了',
+     
+      duration: 2000
+    });
+  },
+  getCenterLocation: function () {
     this.mapCtx.getCenterLocation({
-      success: function(res) {
+      success: function (res) {
         console.log(res.longitude)
         console.log(res.latitude)
       }
     })
   },
-  moveToLocation: function() {
+  moveToLocation: function () {
     this.mapCtx.moveToLocation()
   },
-  translateMarker: function() {
+  translateMarker: function () {
     this.mapCtx.translateMarker({
       markerId: 1,
       autoRotate: true,
@@ -105,16 +49,89 @@ Page({
       }
     })
   },
-  includePoints: function() {
+  includePoints: function () {
+    let _this = this;
     this.mapCtx.includePoints({
       padding: [10],
-      points: [{
-        latitude: 23.10229,
-        longitude: 113.3345211,
-      }, {
-        latitude: 23.00229,
-        longitude: 113.3345211,
-      }]
+      points: _this.data.points
+    })
+  },
+  onLoad() {
+    wx.showLoading({
+      title: '拼命加载中...'
+    });
+    let data = {
+      userId: app.globalData.userId,
+
+    };
+    app.api("/app/schoolMap", data).then(res => {
+      let code = res.data.code;
+
+      if (code == "200") {
+        let data = res.data.data;
+        console.log(data);
+        wx.hideLoading();
+        let points = [];
+        let markers = [];
+        data.map((val, index) => {
+          let obj = {
+            latitude: Number(val.latitude),
+            longitude: Number(val.longitude),
+          };
+          let marker = {
+            width: '18px',
+            height: '28px',
+            latitude: Number(val.latitude),
+            longitude: Number(val.longitude),
+            iconPath: '../../images/location.png',
+            callout: {
+              content: "电焊职业技术学院 ",
+              "车牌号": "12345",
+              color: "#333333",
+              fontSize: "18",
+              borderRadius: "8",
+              bgColor: "#ffffff",
+              padding: "5",
+              display: "BYCLICK",
+               //BYCLICK 点击显示; 'ALWAYS': 常显	String
+              // textAlign	文本对齐方式。有效值: left, right, center
+            }
+
+          };
+
+          markers.push(marker)
+          points.push(obj)
+        });
+        console.log(points);
+        console.log(markers);
+        this.setData({
+          points: points,
+          markers: markers
+        })
+
+
+      } else {
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: data.msg,
+          success(res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }
+
+    }).catch(e => {
+      wx.hideLoading();
+      wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
+        title: '获取数据异常',
+        // icon: 'loading',
+        duration: 2000
+      });
     })
   }
 })

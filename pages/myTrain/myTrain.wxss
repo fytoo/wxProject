@@ -1,6 +1,6 @@
 /* pages/myTrain/muyTrain.wxss */
 
-.container>view{
+.container>view {
   width: 100%;
 }
 
@@ -55,10 +55,34 @@
   height: 32rpx;
   width: 32rpx;
 }
-.tel image,.icon image{
+
+.tel image, .icon image {
   width: 100%;
   height: 100%;
 }
+
+.CourseSubsidies>view {
+  font-size: 20rpx;
+  line-height: 54rpx;
+}
+
+.CourseSubsidies>view:nth-child(1) {
+  float: left;
+}
+
+.CourseSubsidies>view:nth-child(1) text:nth-child(2) {
+  background-color: blue;
+  color: #fff;
+  border-radius: 7rpx;
+  padding: 0 10rpx;
+  margin-left: 10rpx;
+}
+
+.CourseSubsidies>view:nth-child(2) {
+  float: right;
+}
+
+/* 
 .signIn {
   background-color: #f5f5f5;
 }
@@ -68,4 +92,4 @@
   margin: 20rpx 0;
   padding-left: 40rpx;
   font: 26rpx/125rpx "微软雅黑";
-}
+} */

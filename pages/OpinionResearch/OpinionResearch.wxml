@@ -1,0 +1,52 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class="main">
+    <view  class='view01'>
+      <!-- 您的文化程度 -->
+      <view class='sex clearfix'>
+        <text> 您的性别</text>
+        <radio-group class="sex-group" bindchange="sexRadiochange">
+          <label data-index='{{index}}' bindtap='sexradio' class="{{item.checked?'radio checked':'radio'}}" wx:for="{{sex}}" wx:key="{{index}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}" /> {{item.value}}
+          </label>
+        </radio-group>
+      </view>
+      <view class='sex clearfix'>
+        <text>  您的年龄</text>
+        <view class="section">
+          <picker mode="date" value="{{date}}" start="1950-09-01" end="2019-09-01" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view wx:for='{{data}}'  wx:for-index="father_index" wx:key="{{father_index}}" class='feedbackTypeBox'>
+        <view class='feedbackType' style='padding:20rpx 0'>{{item.name}}</view>
+        <view wx:if="{{item.multi==0}}" class='feedbackTypeRadio'>
+
+          <radio-group class="radio-group" bindtap="radioChange">
+            <label data-userAnswer="{{item.name}}" data-son_index='{{index}}' data-index='{{father_index}}' bindtap='radio' class="{{item.checked?'radio checked':'radio'}}" wx:for="{{item.option}}"  wx:key="{{index}}">
+              <radio value="{{item.id}}"/> {{item.name}}
+            </label>
+          </radio-group>
+
+        <!-- 多选 -->
+        </view>
+         <view wx:else="{{item.multi==1}}" class='feedbackTypeRadio'>
+          <checkbox-group class="radio-group" bindchange="checkbox">
+            <label data-userAnswer="{{item.name}}" data-son_index='{{index}}' data-index='{{father_index}}' bindtap='check' class="{{item.checked?'radio checked':'radio'}}" wx:for="{{item.option}}" wx:key="{{index}}">
+              <checkbox value="{{item.name}}" /> {{item.name}}
+            </label>
+          </checkbox-group>
+
+        </view>
+      </view>
+        
+      <view bindtap='submit' class='submitBtn'>提交</view>
+    </view>
+  </view>
+</view>

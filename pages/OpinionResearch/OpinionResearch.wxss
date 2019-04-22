@@ -1,0 +1,102 @@
+/* pages/changePassword/changePassword.wxss */
+
+.main {
+  width: 695rpx;
+  box-shadow: 0 0 10px -2px #cdcdcd;
+  padding: 30rpx;
+  border-radius: 5rpx;
+  margin-top: 70rpx;
+  box-sizing: border-box;
+}
+
+.feedbackType, .feedbackContent, .feedbackPicture {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  border-bottom: 1rpx solid #d6d7dc;
+}
+
+.feedbackContent, .feedbackPicture {
+  border-bottom: 0;
+}
+
+.feedbackTypeRadio {
+  padding: 30rpx 15rpx 0;
+  /* margin-bottom: 50rpx; */
+}
+
+.feedbackTypeRadio .radio {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 26rpx;
+  color: #808080;
+  border: 1rpx solid #808080;
+  min-width: 270rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  display: inline-block;
+  margin-right: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.feedbackTypeRadio .radio:nth-child(2n) {
+  margin-right: 0;
+}
+
+.feedbackTypeRadio .checked,.sex .checked{
+  color: #1a57a8;
+  border: 1rpx solid #1a57a8;
+}
+
+.radio radio {
+  display: none;
+}
+
+.submitBtn {
+  background-color: #1a57a8;
+  text-align: center;
+  color: #fff;
+  font-size: 34rpx;
+  height: 76rpx;
+  line-height: 72rpx;
+  border-radius: 10rpx;
+  padding-bottom: 0 !important;
+  width: 630rpx;
+  /* margin-top: 70rpx; */
+}
+
+.sex {
+  border-bottom: 1rpx solid #d6d7dc;
+  font-size: 30rpx;
+  color: #333;
+  padding: 25rpx 0;
+  width: 100%;
+}
+
+.sex text {
+  float: left;
+}
+
+.sex-group {
+  float: right;
+}
+
+.sex-group label {
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size: 26rpx;
+  color: #808080;
+  border: 1rpx solid #808080;
+  min-width: 75rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+
+.picker {
+  float: right;
+  color: #aaa;
+  margin-right: 20rpx;
+}

@@ -10,8 +10,7 @@ Page({
     // 组件所需的参数
     nvabarData: {
       showCapsule: true, //是否显示左上角图标
-      title: "家庭日常保洁1", //导航栏 中间的标题
-     
+      title: "", //导航栏 中间的标题
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20,
@@ -21,7 +20,55 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+     
+    wx.showLoading({
+      title: '拼命加载中...'
+    });
+    this.setData({
+      ["nvabarData.title"]: options.name
+    });
+    let data = {
+      kId: options.kid,
+      userId: app.globalData.userId
+    }
+    app.api("/app/knowledgeIn", data).then(res => {
+      let code = res.data.code;
+      console.log(res.data);
+      if (code == "200") {
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: '此处返回页面链接，暂无法处理。',
+          success(res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      } else {
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: data.msg,
+          success(res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }
+    }).catch(e => {
+      wx.hideLoading();
+      wx.showToast({ //显示消息提示框  此处是提升用户体验的作用
+        title: '获取数据异常',
+        // icon: 'loading',
+        duration: 2000
+      });
+    })
   },
 
   /**

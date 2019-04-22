@@ -109,18 +109,23 @@ swiper {
   font-size: 22rpx;
   line-height: 36rpx;
 }
-
-.operation button {
+.operation {
   position: absolute;
-  bottom: 25rpx;
-  right: 20rpx;
+  right: 0;
+  bottom: 15rpx;
+}
+.operation text {
+  display: inline-block;
+  min-width: 98rpx;
+  text-align: center;
+  font: 24rpx/44rpx "微软雅黑";
+  border-radius: 3px;
+}
+.operation text:nth-child(1) {
   border: 1px solid #1b429e;
   color: #1b429e;
-  font-size: 22rpx;
-  line-height: 44rpx;
-  background-color: #fff;
+  margin-right: 15rpx;
 }
-
 /* 岗位推荐 */
 
 .recommendBox {

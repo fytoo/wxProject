@@ -20,7 +20,7 @@
 }
 
 .schoolRight {
-  width: calc(100% -285rpx);
+  width: 400rpx;
 }
 
 .schoolName {
@@ -45,6 +45,10 @@
   color: #666;
   font-size: 26rpx;
   line-height: 84rpx;
+  height:84rpx;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .schoolTel {

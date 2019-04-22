@@ -1,0 +1,38 @@
+<!-- nav-bar组件 -->
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class="main">
+    <!-- 反馈类型 -->
+    <view class='feedbackTypeBox'>
+      <view class='feedbackType'>反馈类型</view>
+      <view class='feedbackTypeRadio'>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label data-index='{{index}}' bindtap='radio' class="{{item.checked?'radio checked':'radio'}}" wx:for="{{items}}" wx:key="{{index}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" /> {{item.value}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <!-- 反馈内容 -->
+    <view class='feedbackContentBox'>
+      <view class='feedbackContent'>反馈内容</view>
+      <textarea bindinput='bindchange' placeholder="placeholder颜色是红色的" placeholder-style="color:#a3a3a3;font-size:26rpx;" />
+    </view>
+    <!-- 图片 -->
+    <view class='feedbackPictureBox'>
+      <view class='feedbackPicture'>图片</view>
+      <button type="default" size="mini" bindtap="uploadImage">添加图片</button>
+      <view class="question-images">
+        <block wx:for="{{imagesList}}" wx:for-item="image" wx:key="{{index}}">
+          <view class="q-image-wrap">
+            <!-- 图片缩略图  -->
+            <image class="q-image" src="{{image}}" data-src="{{image}}" mode="aspectFill" bindtap="previewImage"></image>
+           
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view bindtap='submit' class='submitBtn'>提交</view>
+</view>

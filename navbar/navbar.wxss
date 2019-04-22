@@ -41,7 +41,8 @@
   transform: translateX(-50%);
   cursor: pointer;
   height: 54rpx;
-  width: 200rpx;
+ /* width: 200rpx; */
+  width: 100rpx;
   border-radius: 5px;
   border: 1px solid #1b429e;
 }
@@ -61,7 +62,8 @@
 
 .learnBox .select text {
   vertical-align: top;
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
   font-size: 26rpx;
   line-height: 54rpx;
   text-align: center;

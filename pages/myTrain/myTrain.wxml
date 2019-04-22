@@ -19,32 +19,22 @@
         <image class='icon' src='../../images/tel.png'></image>
         <text>87166161</text>
       </view>
-    </view>
-    <view class="signIn">
-      <view>
-        <text class="signTime">2018/12/24 12:00</text>
-        <text class="signState">签到成功</text>
-      </view>
-      <view>
-        <text class="signTime">2018/12/24 12:00</text>
-        <text class="signState">签到成功</text>
-      </view>
-      <view>
-        <text class="signTime">2018/12/24 12:00</text>
-        <text class="signState">签到成功</text>
-      </view>
-      <view>
-        <text class="signTime">2018/12/24 12:00</text>
-        <text class="signState">签到成功</text>
-      </view>
-      <view>
-        <text class="signTime">2018/12/24 12:00</text>
-        <text class="signState">签到成功</text>
-      </view>
-      <view>
-        <text class="signTime">2018/12/24 12:00</text>
-        <text class="signState">签到成功</text>
+       <view class="CourseSubsidies clearfix">
+        <view>
+          <text>课程补贴</text>
+          <text>已通过</text>
+        </view>
+        <view>
+            已发放2000元
+        </view>
       </view>
     </view>
+    <!-- <view class="signIn">
+      <view>
+        <text class="signTime">2018/12/24 12:00</text>
+        <text class="signState">签到成功</text>
+      </view>
+     
+    </view> -->
   </view>
 </view>

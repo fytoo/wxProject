@@ -5,10 +5,12 @@
 const fetch = require('./utils/fetch.js');
 //app.js
 App({
+ 
   /**
    * fetch API
    */
-  fetch: fetch,
+  login: fetch.login,
+  api: fetch.api,
   onLaunch: function (options) {
     // 判断是否由分享进入小程序
     if (options.scene == 1007 || options.scene == 1008) {
@@ -31,5 +33,7 @@ App({
     userInfo: null,
     share: false,  // 分享默认为false
     height: 0,
+    url: 'https://zypx.hbwwcc.com/',
+    userId : ''
   }
 })

@@ -6,16 +6,16 @@
   <view>
     <view class="userBox clearfix">
       <view class="userimage">
-        <image src="../../images/1.jpg"> </image>
+        <image src="../../images/1.png"> </image>
       </view>
       <view class="userInfo">
-        <view class="userName">小乐子</view>
-        <view class="usercard">411408199511138716</view>
+        <view class="userName">{{name}}</view>
+        <view class="usercard">{{idNumber}}</view>
       </view>
     </view>
     <view class="typeSelect">
       <view class='itemBox clearfix'>
-        <view wx:for='{{list}}' :key="index" class='item' data-index='{{index}}' bindtap='goMytrain'>
+        <view wx:key='{{index}}' wx:for='{{list}}'  wx:key="index" class='item' data-index='{{index}}' bindtap='goMytrain'>
           <view class="iconBox">
             <image class="icon iconfont" src='{{item.imgSrc}}'></image>
           </view>
@@ -24,7 +24,7 @@
       </view>
     </view>
     <view class="listOptions">
-      <view wx:for="{{listOptions}}" class="options">
+      <view bindtap='goupdatePassword' data-index='{{index}}' wx:key='{{index}}' wx:for="{{listOptions}}" class="options">
         <view>
           <text class="optionsDec">{{item.optionsDec}}</text>
           <image class="optionsIcon" src='{{item.imgSrc}}'></image>
@@ -33,7 +33,7 @@
     </view>
 
     <view class='operation'>
-        <button>退出登录</button>
+        <button bindtap='loginOut'>退出登录</button>
     </view>
   </view>
 </view>

@@ -1,36 +1,46 @@
-<!-- nav-bar组件 -->
-<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<!--导航菜单-->
 <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
-<view class='container' style='margin-top: {{height}}px'>
+<view class="navbar" style=" z-index:50;margin-top: {{navbarTop}}px">
+  <!--循环-->
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item}}
+   
+  </view>
+</view>
+
+
+<view hidden="{{currentTab !== 0}}" id="one">
+ <view class='container' style='margin-top: {{height}}px'>
      <view class="main">
        <view class="content">
          <view class="videoBox">
-           <image src="../../images/1.jpg" mode='widthFix'></image>
+           <image src="{{picture}}" mode='widthFix'></image>
          </view>
          <view class="list">
            <view class="item">
              <view class="box">
                <text class="item_order">课程简介：</text>
-                <text class="item_num">666人学习</text>
+                <text class="item_num">{{studyNum}}人学习</text>
              </view>
-             <view class="item_content">达芙妮萨迪克金凤花时间大幅拉进了房间打扫涉及到了附近的撒开了封开收集反馈了WEJFE路费就lEAFJEL 对方就拉屎的风双方就拉上进了房间啊是独立开发是家里的房间拉市景</view>
+             <view class="item_content">{{details}}</view>
            </view>
          </view>
          
        </view>
        <view view class="operationBox">
-            <view class="item" wx:for="{{LidtData}}" :key="index" catchtap="show" data-index="{{index}}">
+            <view class="item" wx:for="{{ListData}}" wx:key="index" catchtap="show" data-index="{{index}}">
                 <view class="firstMeun" :class="[{active:item.show}]">
-                    <text>{{item.title}}</text> 
+                    <text>{{index+1}},{{item.name}}</text> 
                     <image src='../../images/up.png' wx:if="{{item.show}}" class="up more"></image>
                     <image src='../../images/more.png' wx:if="{{!item.show}}" class="more smallmore"></image>
                 </view>
                 <!-- 二级菜单 -->
                 <view wx:if="{{item.show}}">
-                  <view class="secondeMeun" wx:for="{{item.secTitle}}" :key="index" data-index='{{sexIndex}}' catchtap="showSecmeun">
+                  <view class="secondeMeun" wx:for="{{item.kList}}" wx:key="index" data-index='{{sexIndex}}' catchtap="showSecmeun" data-id='{{item.id}}'>
                        <view>
-                        <text>{{item.order}}</text>
-                        <text>{{item.dec}} </text>
+                        <text>{{index+1}},</text>
+                        <text>{{item.name}} </text>
                         <image src="../../images/smallmore.png" class="more "></image>
                       </view>
                   </view>
@@ -40,3 +50,33 @@
          </view>
     </view>
 </view>
+</view>
+
+
+<view hidden="{{currentTab !== 1}}" id="one">
+  
+</view>
+
+
+<view hidden="{{currentTab !== 2}}" id="one">
+     <view class="item" wx:for="{{MajorList}}" wx:for-item="item">
+         <view class="project-box">
+		        <view class="post-box">
+			        <text class='courseName'>{{item.name}}</text>
+			        <text class='courseMoney'>最高补贴{{item.subsidy}}</text>
+		        </view>
+		       <view class="company-box">{{item.schoolName}}</view>
+		        <view class="course-box">
+			        <text class='curricula'>开课时间：{{item.startTime}}</text>
+              <view  wx:if="{{item.status==1}}">
+              <text class="signUp"  data-id='{{item.id}}' data-name='{{item.name}}' data-schoolName="{{item.schoolName}}" bindtap='signUp' data-status="{{item.status}}">报名</text>
+             </view>
+              <view wx:else>
+              <text class="signUp"  data-id='{{item.id}}' data-name='{{item.name}}' data-schoolName="{{item.schoolName}}" data-status="{{item.status}}">报名</text>
+             </view>
+		        </view>
+	        </view> 	
+      </view>   
+</view>
+
+

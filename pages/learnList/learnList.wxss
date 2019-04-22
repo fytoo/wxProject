@@ -1,3 +1,54 @@
+/*圆点数字标注*/
+.notice {
+    width:28rpx;
+    height:28rpx;
+    color:#fff;
+    text-align:center;
+    background-color:#5f6bd1;
+    border-radius:50%;
+    position:absolute;
+    float:left;
+   /* margin-top: 8rpx;*/
+   top:5rpx;
+    font-size: 15rpx;
+    right:30rpx;
+    line-height:30rpx; }
+
+/*顶部导航样式*/
+  .navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #eeeeee;
+ z-index: 50; 
+ margin-top:10%;
+
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center;
+ line-height: 60rpx; 
+ font-size: 30rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active{ 
+ font-size: 30rpx;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #fff; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+}
 /* pages/learnList/learnList.wxss */
 
 .content {
@@ -5,7 +56,9 @@
   padding: 35rpx 20rpx;
   font: 28rpx/64rpx "微软雅黑";
 }
-
+.main{
+  width:100%;
+}
 .videoBox {
   height: 350rpx;
 }
@@ -84,3 +137,72 @@
 .active {
   background-color: #fafafa !important;
 }
+
+
+
+
+	.project-box{
+			width: 100%;
+			height: auto;
+			border-bottom: 1px solid #eeeeee;
+			padding: 12px 0;
+		}
+		.project-box div{
+			margin: 0;
+		}
+		.post-box{
+			width: 100%;
+			height: 45rpx;
+			box-sizing: border-box;
+			padding: 0 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.courseName{
+      font-size: 38rpx;
+			color: #000000;
+		}
+	  .courseMoney{
+			width: 300rpx;
+			height: 56rpx;
+			line-height: 56rpx;
+			text-align: center;
+			background: #e25132;
+			border-radius: 15rpx;
+			color: #fff;
+			font-size: 27rpx;
+		}
+		.company-box{
+			width: 100%;
+			height: 95rpx;
+			line-height: 95rpx;
+			box-sizing: border-box;
+			padding-left: 10px;
+			font-size: 32rpx;
+			color: #8a8a8a;
+		}
+		.course-box{
+			width: 100%;
+			height: 50rpx;
+			box-sizing: border-box;
+			padding: 0 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.curricula{
+      font-size: 32rpx;
+			color: #535353;
+		}
+		.signUp{
+			width: 100rpx;
+			height: 56rpx;
+			line-height: 56rpx;
+			text-align: center;
+			border: 1px solid #253d83;
+			border-radius: 6rpx;
+			color: #253d83;
+			font-size: 34rpx;
+      display:block;
+		}
